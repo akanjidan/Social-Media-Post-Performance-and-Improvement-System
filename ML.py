@@ -3,9 +3,8 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import pandas as pd
 load_dotenv()
-client = OpenAI(api_key = '')
-#Code
-#Daniel
+client = OpenAI(api_key = '') # To run this code, create an api key for this code.....
+
 def getresult(post, metric):
     if metric=='tone':
         prompt = f"""from the following choices: Casual/Conversational , Informative/Educational, Inspirational/Motivational  What is the {metric} used in this Facebook Post {post} and associate a score in 1 to 10, return the tone and score only in this format: tone:score"""
